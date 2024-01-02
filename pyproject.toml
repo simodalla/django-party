@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "django-party"
+version = "0.1.0"
+description = ""
+authors = ["Simone Dalla <simodalla@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+Django = "^5.0.1"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.1.10"
+devtools = "^0.12.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 100
+extend-select = ['Q', 'RUF100', 'C90', 'UP', 'I', 'T']
+ignore = ["G004"] #["B008", "SIM102"]
+unfixable = ["G004"] # , "F401"]
+exclude = [
+  ".git",
+  ".mypy_cache",
+  ".pre-commit-cache",
+  ".ruff_cache",
+  ".tox",
+  ".venv",
+  "venv",
+  "docs",
+  "__pycache",
+  "**/migrations/*",
+]
+target-version = "py312"
+mccabe = { max-complexity = 14 }
+
+[tool.ruff.lint.isort]
+known-first-party = ["core", "party"]
+sections = { "django" = ["django"] }
+section-order = [
+  "future",
+  "standard-library",
+  "third-party",
+  "django",
+  "first-party",
+  "local-folder"]
