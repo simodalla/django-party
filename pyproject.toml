@@ -10,6 +10,7 @@ python = "^3.12"
 Django = "^5.0.1"
 pytest = "^7.4.4"
 pytest-django = "^4.7.0"
+django-tailwind = {extras = ["reload"], version = "^3.8.0"}
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.1.10"
