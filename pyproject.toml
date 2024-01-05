@@ -24,7 +24,7 @@ build-backend = "poetry.core.masonry.api"
 line-length = 100
 extend-select = ['Q', 'RUF100', 'C90', 'UP', 'I', 'T']
 ignore = ["G004"] #["B008", "SIM102"]
-unfixable = ["G004"] # , "F401"]
+unfixable = ["G004", "F401"]
 exclude = [
   ".git",
   ".mypy_cache",
