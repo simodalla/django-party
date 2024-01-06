@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     "tailwind",
     "theme",
     "django_browser_reload",
+    "crispy_forms",
+    "crispy_bootstrap4",
     "party",
 ]
 
@@ -129,4 +131,7 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 TAILWIND_APP_NAME = "theme"
+
 INTERNAL_IPS = ["127.0.0.1"]
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"

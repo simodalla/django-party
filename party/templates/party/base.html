@@ -1,6 +1,5 @@
 <!--party/templates/party/base.html-->
 
-
 {% load static %}
 {% load static tailwind_tags %}
 
@@ -13,9 +12,11 @@
     <script type="text/javascript" src="{% static '/party/js/alpine.min.js' %}" defer></script>
     {% tailwind_css %}
 </head>
-<body class="bg-custom-powder-light">
+<body class="bg-custom-powder-light" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'> <!-- NEW - hx-headers added -->
     <nav class="bg-custom-red">
-        <a href="/" class="inline-block p-4 text-custom-powder-light font-dancing-script text-2xl">
+        <a href="{% url 'page_party_list' %}"
+            class="inline-block p-4 text-custom-powder-light font-dancing-script text-2xl"
+            >
             My parties
         </a>
     </nav>

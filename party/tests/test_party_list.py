@@ -4,10 +4,8 @@ import pytest
 
 from django.urls import reverse
 
-from party.models import Gift, Guest, Party
 
-
-@pytest.mark.db
+@pytest.mark.django_db
 def test_party_list_page_returns_list_of_users_future_parties(
     authenticated_client,
     create_user,
